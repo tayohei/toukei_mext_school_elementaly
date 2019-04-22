@@ -49,7 +49,7 @@ curl <-"https://www.e-stat.go.jp/stat-search/file-download?statInfId=00003139229
 cdestfile <- "./input/school_elementely_2015.xls"
 download.file(curl,cdestfile,mode="wb")
 
-# 2014年 はDBもあるのか！ そしてファイル形式がxlsだ
+# 2014年 
 # https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20140&stat_infid=000027601765&second2=1
 # https://www.e-stat.go.jp/stat-search/file-download?statInfId=000027601765&fileKind=0
 curl <-"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000027601765&fileKind=0"
@@ -58,3 +58,9 @@ download.file(curl,cdestfile,mode="wb")
 
 
 
+# 2013年 
+# https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20130&stat_infid=000023616551&second2=1
+# https://www.e-stat.go.jp/stat-search/file-download?statInfId=000023616551&fileKind=0
+curl <-"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000023616551&fileKind=0"
+cdestfile <- "./input/school_elementely_2013.xls"
+download.file(curl,cdestfile,mode="wb")

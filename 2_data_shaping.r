@@ -386,8 +386,8 @@ write.csv(tmp,output_filename,row.names=F)
 }
 
 # それそれ実行
-for(f_year in 2014:2018){
-	# f_year = 2014
+for(f_year in 2013:2018){
+	# f_year = 2013
 	if(f_year<=2015){ # 2015以前はファイル形式がxls形式
 		filename = str_c("./input/school_elementely_",f_year,".xls")
 	}else{
