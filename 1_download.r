@@ -1,28 +1,30 @@
-# ¦ì‹ÆƒfƒBƒŒƒNƒgƒŠ‚Ì•ÏX
-# “K“à—e‚Í‘‚«Š·‚¦‚é
+# ESTATã‹ã‚‰å¯¾è±¡ã®ãƒ‡ãƒ¼ã‚¿ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¦ãã‚‹ã€‚
+
+# æä¾›çµ±è¨ˆå	å­¦æ ¡åŸºæœ¬èª¿æŸ»
+# æä¾›åˆ†é¡2	åˆç­‰ä¸­ç­‰æ•™è‚²æ©Ÿé–¢ãƒ»å°‚ä¿®å­¦æ ¡ãƒ»å„ç¨®å­¦æ ¡ã€Šå ±å‘Šæ›¸æœªæ²è¼‰é›†è¨ˆã€‹
+# æä¾›åˆ†é¡3	å¸‚ç”ºæ‘åˆ¥é›†è¨ˆ
+# çµ±è¨ˆè¡¨å	å¸‚ç”ºæ‘åˆ¥é›†è¨ˆã€€å­¦æ ¡èª¿æŸ»ï¼ˆå°å­¦æ ¡ï¼‰
+
+# â€»ä½œæ¥­ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®å¤‰æ›´
+# é©æ™‚å†…å®¹ã¯æ›¸ãæ›ãˆã‚‹
 working_dir = "C:/R/script/toukei_mext_school_elementaly"
 
-# ì‹ÆƒfƒBƒŒƒNƒgƒŠ‚Ìw’è
+# ä½œæ¥­ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®æŒ‡å®š
 setwd(working_dir)
 
-# ƒ‰ƒCƒuƒ‰ƒŠ
+# ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 library("tidyverse")
 library("readxl")
 library("magrittr")
-
-# ’ñ‹Ÿ“Œv–¼	ŠwZŠî–{’²¸
-# ’ñ‹Ÿ•ª—Ş2	‰“™’†“™‹³ˆç‹@ŠÖEêCŠwZEŠeíŠwZs•ñ‘–¢ŒfÚWŒvt
-# ’ñ‹Ÿ•ª—Ş3	s’¬‘º•ÊWŒv
-# “Œv•\–¼	s’¬‘º•ÊWŒv@ŠwZ’²¸i¬ŠwZj
 
 # 2018
 # https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20180&stat_infid=000031812534&second2=1
 # https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031812534&fileKind=0
 curl <-"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031812534&fileKind=0"
 cdestfile <- "./ey0318_2018.xlsx"
-download.file(curl,cdestfile,mode="wb") # mode="wb"i¨ƒoƒCƒiƒŠ®j‚É‚µ‚Ä‚¨‚©‚È‚¢‚Æ³‚µ‚­ƒ_ƒEƒ“ƒ[ƒh‚Å‚«‚È‚¢B
+download.file(curl,cdestfile,mode="wb") # mode="wb"ï¼ˆâ†’ãƒã‚¤ãƒŠãƒªå¼ï¼‰ã«ã—ã¦ãŠã‹ãªã„ã¨æ­£ã—ããƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ããªã„ã€‚
 
-# 2017”N
+# 2017å¹´
 # https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20170&second2=1
 # https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20170&stat_infid=000031686092&second2=1
 curl <- "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031686092&fileKind=0"
@@ -30,21 +32,21 @@ cdestfile <- "./ey0318_2017.xlsx"
 download.file(curl,cdestfile,mode="wb")
 
 
-# 2016 ‰½‚³ƒtƒ@ƒCƒ‹–¼‚ªˆá‚¤‚¶‚á‚ñB
+# 2016 ä½•ã•ãƒ•ã‚¡ã‚¤ãƒ«åãŒé•ã†ã˜ã‚ƒã‚“ã€‚
 # https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20160&stat_infid=000031543953&second2=1
 # https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031543953&fileKind=0
 curl <-"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031543953&fileKind=0"
 cdestfile <- "./ey0318_2016.xlsx"
 download.file(curl,cdestfile,mode="wb")
 
-# 2015”N ‚ÍDB‚à‚ ‚é‚Ì‚©I ‚»‚µ‚Äƒtƒ@ƒCƒ‹Œ`®‚ªxls‚¾
+# 2015å¹´ ã¯DBã‚‚ã‚ã‚‹ã®ã‹ï¼ ãã—ã¦ãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼ãŒxlsã 
 # https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20150&stat_infid=000031392297&second2=1
 # https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031392297&fileKind=0
 curl <-"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031392297&fileKind=0"
 cdestfile <- "./ey0318_2015.xls"
 download.file(curl,cdestfile,mode="wb")
 
-# 2014”N ‚ÍDB‚à‚ ‚é‚Ì‚©I ‚»‚µ‚Äƒtƒ@ƒCƒ‹Œ`®‚ªxls‚¾
+# 2014å¹´ ã¯DBã‚‚ã‚ã‚‹ã®ã‹ï¼ ãã—ã¦ãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼ãŒxlsã 
 # https://www.e-stat.go.jp/stat-search/files?page=1&query=%E5%B8%82%E7%94%BA%E6%9D%91&layout=dataset&toukei=00400001&year=20140&stat_infid=000027601765&second2=1
 # https://www.e-stat.go.jp/stat-search/file-download?statInfId=000027601765&fileKind=0
 curl <-"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000027601765&fileKind=0"
